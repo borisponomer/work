@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+:root {
+    --grey-colot: #696969;
+}
+
+body {
+    background-color: #353638;
+    margin: 0 auto;
+}
