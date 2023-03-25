@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, computed } from 'vue';
+import { reactive, computed, watch } from 'vue';
 
 const timerState = reactive({ time: 0, isWork: false, startTimestamp: 0, pausedValue: 0 });
 const color = computed(() => timerState.isWork ? '#ffffff' : '#9E9E9E');
@@ -43,6 +43,10 @@ const resetTimer = () => {
     timerState.time = 0;
     timerState.isWork = false;
 }
+
+watch(() => timerState.isWork, (old) => { 
+    if (!old) alert('Timer is active')
+})
 
 </script>
 
